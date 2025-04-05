@@ -13,4 +13,4 @@ const DBcon=async()=>{
 
 }
 
-export default DBcon
+export default DBcon;
