@@ -8,13 +8,14 @@ import AttendanceRoutes from "./routes/attendance.js";
 import cors from 'cors';
 import StudentRoutes from "./routes/students.js";
 import path from 'path'; 
-import 'dotenv/config';
+import job from "./lib/cron.js";
+
 
 dotenv.config();
 
-
+job.start();
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8080;
 
 DBcon();
 
