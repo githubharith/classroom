@@ -8,7 +8,7 @@ import AttendanceRoutes from "./routes/attendance.js";
 import cors from 'cors';
 import StudentRoutes from "./routes/students.js";
 import path from 'path'; 
-
+import 'dotenv/config';
 
 dotenv.config();
 

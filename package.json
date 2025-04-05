@@ -12,20 +12,20 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-     "nodemon": "^3.0.0",
-     "@react-oauth/google": "^0.12.1",
+    "@react-oauth/google": "^0.12.1",
     "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "google-auth-library": "^9.15.1",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.12.0",
     "multer": "^1.4.5-lts.1",
-    "path": "^0.12.7",
-    "cookie-parser": "^1.4.7",
-    "google-auth-library": "^9.15.1",
+    "nodemon": "^3.0.0",
     "passport": "^0.7.0",
     "passport-google-oauth20": "^2.0.0",
+    "path": "^0.12.7",
     "react-router-dom": "^7.4.0"
   }
 }
