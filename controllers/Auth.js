@@ -140,10 +140,17 @@ const getUsers = async (req, res) => {
 
 const googleLogin = async (req, res) => {
   try {
-    const { token } = req.body;
+    const { idToken } = req.body; // Changed from token to idToken
+
+    if (!idToken) {
+      return res.status(400).json({
+        success: false,
+        message: "ID token is required",
+      });
+    }
 
     const ticket = await client.verifyIdToken({
-      idToken: token,
+       idToken,
       audience: process.env.VITE_GOOGLE_CLIENT_ID,
     });
 
@@ -189,7 +196,8 @@ const googleLogin = async (req, res) => {
     console.error('googleLogin error:', error);
     res.status(500).json({
       success: false,
-      message: "Internal server error",
+      message: "Authentication failed",
+      error: error.message // Only in development
     });
   }
 };
